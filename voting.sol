@@ -70,7 +70,7 @@ pragma solidity 0.8.0;
             v.voterAddress = msg.sender;
             v.choice = _choice;
             if (_choice){
-                countResult++; //counting on the go
+                countResult++; 
             }
             votes[totalVote] = v;
             totalVote++;
@@ -85,7 +85,7 @@ pragma solidity 0.8.0;
         onlyOfficial
     {
         state = State.Ended;
-        finalResult = countResult; //move result from private countResult to public finalResult
+        finalResult = countResult; 
         emit voteEnded(finalResult);
     }
 }
